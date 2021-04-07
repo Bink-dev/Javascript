@@ -3,8 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>hoofdstuk 4</title>
+    <style>
+
+        #slideholder1 {
+            height: 200px;
+            width: 700px;
+            border: 1px solid black;
+        }
+
+        #slideholder2 {
+            height: 200px;
+            width: 700px;
+            border: 1px solid black;
+        }
+
+        #slideholder3 {
+            height: 200px;
+            width: 700px;
+            border: 1px solid black;
+        }
+
+    </style>
 </head>
 <body>
+
+<div id="slideholder1"></div>
+<div id="slideholder2"></div>
+<div id="slideholder3"></div>
+<script>
+
+    var plaatjesTop = [1,2,3];
+    var tellerTop = 0;
+    var tellerMid = 4;
+    var tellerBot = 7;
+
+    var slideholder1 = document.getElementById("slideholder1");
+    slideholder1.style.backgroundImage = "url('img/G1.jpg')";
+
+    slideholder1.addEventListener("click", function () {
+        slideholder1.style.backgroundImage = "url('img/G"+ getTop() + ".jpg')";
+    });
+
+    function getTop() {
+        if (tellerTop >= plaatjesTop.length) {
+            tellerTop = 1;
+        } else {
+            tellerTop++
+        }
+        console.log(tellerTop);
+        return tellerTop;
+    }
+
+    var slideholder2 = document.getElementById("slideholder2");
+    slideholder2.style.backgroundImage = "url('img/G4.jpg')";
+
+    slideholder2.addEventListener("click", function () {
+        slideholder2.style.backgroundImage = "url('img/G"+ getMid() + ".jpg')";
+    });
+
+    function getMid() {
+        if (tellerMid >= 6) {
+            tellerMid = 4;
+        } else {
+            tellerMid++
+        }
+        console.log(tellerMid);
+        return tellerMid;
+    }
+
+    var slideholder3 = document.getElementById("slideholder3");
+    slideholder3.style.backgroundImage = "url('img/G7.jpg')";
+
+    slideholder3.addEventListener("click", function () {
+        slideholder3.style.backgroundImage = "url('img/G"+ getBot() + ".jpg')";
+    });
+
+    function getBot() {
+        if (tellerBot >= 9) {
+            tellerBot = 7;
+        } else {
+            tellerBot++
+        }
+        console.log(tellerBot);
+        return tellerBot;
+    }
+</script>
 
 </body>
 </html>
