@@ -5,6 +5,11 @@
     <title>Hoofdstuk 4</title>
     <style>
 
+        image {
+            width: 300px;
+            height: 300px;
+        }
+
         #slideholder {
             height: 300px;
             width: 300px;
@@ -22,10 +27,10 @@
     var plaatjes = [1,2,3,4,5,6,7,8,9];
     var teller = 0;
     var slideholder = document.getElementById("slideholder");
-    slideholder.style.backgroundImage = "url('img/aapje1.jpg')";
+    slideholder.style.backgroundImage = "url('imgH4.2/aapje1.jpg')";
 
     slideholder.addEventListener("click", function () {
-        slideholder.style.backgroundImage = "url('img/aapje"+ getAap() + ".jpg')";
+        slideholder.style.backgroundImage = "url('imgH4.2/aapje"+ getAap() + ".jpg')";
     });
 
     function getAap() {
