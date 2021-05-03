@@ -12,6 +12,6 @@ while (randomNumbers.length < 9) {
 var random = 0
 for (var plaatje in plaatjes) {
     console.log(plaatjes[plaatje]);
-    plaatjes[plaatje].src = "img/aapje" + randomNumbers[random] + ".jpg";
+    plaatjes[plaatje].src = "imgH4.2/aapje" + randomNumbers[random] + ".jpg";
     random++;
 }
